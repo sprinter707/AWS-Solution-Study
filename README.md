@@ -9,3 +9,10 @@ https://programmers.co.kr/learn/courses/30/parts/12081
 2. [L2] 주식가격
 3. [L2] 기능개발
 4. [L2] 프린터
+
+#2021-03-30 ~ 04-04
+금주 목표 - 고득점 kit (힙)
+https://programmers.co.kr/learn/courses/30/parts/12117
+[L2] 더 맵게
+[L3] 디스크 컨트롤러
+[L3] 이중우선순위큐
