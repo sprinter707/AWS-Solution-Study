@@ -12,7 +12,7 @@ public class algorithmTest13 {
 		// TODO Auto-generated method stub
 		int a[] = solution();
 	}
-	//ÀÌÁß¿ì¼±¼øÀ§Å¥ - Èü
+	//ì´ì¤‘ìš°ì„ ìˆœìœ„í - í™
 	public static int[] solution() {
 		String[] operations = { "I -45", "I 653", "D 1", "I -642", "I 45", "I 97", "D 1", "D -1", "I 333" };
 		int[] answer = new int[2];
