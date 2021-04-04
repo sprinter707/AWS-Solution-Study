@@ -9,7 +9,7 @@ public class algorithmTest10 {
 		// TODO Auto-generated method stub
 		solution();
 	}
-	//±â´É°³¹ß - ½ºÅÃ/Å¥
+	//ê¸°ëŠ¥ê°œë°œ - ìŠ¤íƒ/í
 	public static int[] solution() {
 		int[] progresses = new int[] { 95, 90, 99, 99, 80, 99 };
 		int[] speeds = new int[] { 1, 1, 1, 1, 1, 1 };
