@@ -9,7 +9,7 @@ public class algorithmTest11 {
 		// TODO Auto-generated method stub
 		int a = solution();
 	}
-	//´õ ¸Ê°Ô - Èü
+	//ë” ë§µê²Œ - í™
 	public static int solution() {
 		int[] scoville = { 1, 2, 3, 4, 9, 10, 12, 13 };
 		int K = 7;
