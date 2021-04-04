@@ -9,7 +9,7 @@ public class algorithmTest12 {
 		// TODO Auto-generated method stub
 		int a = solution();
 	}
-	//µğ½ºÅ© ÄÁÆ®·Ñ·¯ - Èü
+	//ë””ìŠ¤í¬ ì»¨íŠ¸ë¡¤ëŸ¬ - í™
 	public static int solution() {
 		int[][] jobs = { {0,3},{1,9},{2,6} };
 		int totalSize = jobs.length;
