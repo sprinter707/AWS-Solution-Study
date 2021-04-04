@@ -10,7 +10,7 @@ public class algorithmTest9 {
 	}
 
 	
-	//га╦╟ем - ╫╨ец/е╔
+	//М■└К╕╟М└╟ - Л┼╓М┐²/М│░
 	public static int solution() {
 		class Printer {
 			int location;
