@@ -9,7 +9,7 @@ public class algorithmTest8 {
 		// TODO Auto-generated method stub
 		solution();
 	}
-	//ÁÖ½Ä°¡°İ - ½ºÅÃ/Å¥
+	//ì£¼ì‹ê°€ê²© - ìŠ¤íƒ/í
 	public static int[] solution() {
 		int[] prices = { 1, 2, 3, 2, 3 };
 		int[] answer = new int[prices.length];
