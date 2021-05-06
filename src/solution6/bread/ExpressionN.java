@@ -20,69 +20,65 @@ import java.util.HashMap;
 
 public class ExpressionN {
 	private HashMap<Integer, ArrayList<Integer>> h;
-	private int NUM;
 
 	public boolean calc(int N, int count) {
 		ArrayList<Integer> list = h.get(count-1);
-		ArrayList<Integer> list2 = new ArrayList<Integer>();
-
-		for(int n : list) {
-			// NN
-			list2.add(n*10 + N);
-			// N+N
-			list2.add(n+N);
-			// N-N
-			if(n-N > 0) list2.add(n-N);
-			// N/N
-			if(n/N > 0) list2.add(n/N);
-			// N*N
-			list2.add(n*N);
-		}
-
-		for(int j=2; j<count ; j++) {
-			ArrayList<Integer> x = h.get(j);
-			ArrayList<Integer> y = h.get(count-j);
-
-			for(int x1: x) {
-				for(int y1: y) {
-					list2.add(x1 + y1);
-					if(x1-y1>0) { list2.add(x1-y1); }
-					if(x1/y1>0) { list2.add(x1 / y1); }
-				}
-			}
-		}
-
-		h.put(count, list2);
-
-		if(list2.contains(NUM)) {
-			return true;
-		} else{
-			return false;
-		}
+        ArrayList<Integer> list2 = new ArrayList<Integer>();
+        
+        int temp =0;
+        // NNNN
+        for(int i=0; i<count; i++) {
+            temp = temp*10 + N;
+        }
+        list2.add(temp);
+        
+        for(int j=1; j<count ; j++) {
+            // count 4 일때, NNNN과 1+3 U 2+2 U 3+1 조합
+            ArrayList<Integer> x = h.get(j);
+            ArrayList<Integer> y = h.get(count-j); 
+            
+            for(int x1: x) {
+                for(int y1: y) {
+                    list2.add(x1 + y1);
+                    list2.add(x1 * y1);
+                    if(x1-y1>0) { list2.add(x1-y1); }
+                    if(y1-x1>0) { list2.add(y1-x1); }
+                    if(x1/y1>0) { list2.add(x1 / y1); }
+                    if(y1/x1>0) { list2.add(y1 / x1); }
+                }
+            }
+        }
+        
+        h.put(count, list2);
+        
+        if(list2.contains(number)) {
+            return true;
+        } else{
+            return false;
+        }
 	}
 
 	public int solution(int N, int number) {
 		int answer = -1;
-		NUM = number;
-
-		ArrayList<Integer> temp = new ArrayList<Integer>();
-		h = new HashMap<Integer, ArrayList<Integer>>();
-
-		temp.add(N);
-		h.put(1, temp);
-
-		if(number == N ) {
+        
+        ArrayList<Integer> temp = new ArrayList<Integer>();
+        h = new HashMap<Integer, ArrayList<Integer>>();
+        
+        temp.add(N);
+        h.put(1, temp);
+        
+        if(number == N ) {
 			return 1;
 		}
-
-		for(int i=1; i<=8 ;i++) {
-			if(calc(N, i)) {
-				answer = i;
-				break;
-			}
-		}
-
-		return answer;
+               
+        for(int i=2; i<=8 ;i++) {
+            if(calc(N, i, number)) {
+                answer = i;
+                break;
+            }
+        }
+                        
+        return answer;
     }
 
 	public static void main(String[] args) {
