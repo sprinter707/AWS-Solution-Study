@@ -1,4 +1,12 @@
+# java
 out/
 .idea/
 *.class
 *.iml
+
+# js
+node_modules
+.prettierrc
+.eslintrc.json
+package-lock.json
+package.json
